@@ -1,0 +1,22 @@
+uuid: e465d804-defe-419b-92ba-97510e2a5392
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_avec_image
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.bloc_avec_image.body
+field_name: body
+entity_type: block_content
+bundle: bloc_avec_image
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

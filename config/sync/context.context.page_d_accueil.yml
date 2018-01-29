@@ -1,0 +1,35 @@
+uuid: 09e342ba-bed1-4576-9946-dfc22ccc57e5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+name: page_d_accueil
+label: 'Page d''accueil'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: 0
+    uuid: eb654f54-2d36-4b19-85ed-ef0ac6a42be7
+    context_mapping: {  }
+reactions:
+  regions:
+    id: regions
+    regions:
+      bartik: {  }
+      classy: {  }
+      seven: {  }
+      stable: {  }
+    saved: false
+    uuid: 8b489668-b263-4b3c-ac45-b6b85f2c257e
+  theme:
+    id: theme
+    theme: bartik
+    saved: false
+    uuid: 2ca85c22-4816-4f38-aa04-178f84f6a8d2
+weight: 0

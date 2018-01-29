@@ -1,0 +1,23 @@
+uuid: cc0e1df9-dbf3-4e08-abca-6d0dd2307667
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.contact_le_responsable
+    - field.storage.contact_message.field_site_web
+  module:
+    - link
+id: contact_message.contact_le_responsable.field_site_web
+field_name: field_site_web
+entity_type: contact_message
+bundle: contact_le_responsable
+label: 'Url de la page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

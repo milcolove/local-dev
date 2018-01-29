@@ -1,0 +1,33 @@
+uuid: d6d93c87-2a31-460b-858f-4706e52472b5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.affichage_meme_type_d_hotel
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__affichage_meme_type_d_hotel_block_1
+theme: bartik
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:affichage_meme_type_d_hotel-block_1'
+settings:
+  id: 'views_block:affichage_meme_type_d_hotel-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      hotel: hotel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

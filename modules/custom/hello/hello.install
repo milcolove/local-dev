@@ -1,0 +1,73 @@
+<?php
+
+
+use Drupal\Core\Database\Database;
+
+
+function hello_schema() {
+ $schema['hello_node_history'] = [
+   'description' => 'The base table for nodes.',
+   'fields' => [
+     'hid' => [
+       'description' => 'The primary identifier for a node.',
+       'type' => 'serial',
+       'unsigned' => TRUE,
+       'not null' => TRUE,
+     ],
+     'nid' => [
+       'description' => 'le champ nid ',
+       'type' => 'int',
+       'unsigned' => TRUE,
+       'not null' => TRUE,
+     ],
+     'update_time' => [
+       'description' => 'The type of update time.',
+       'type' => 'int',
+       'not null' => TRUE,
+     ],
+      'uid' => [
+        'description' => 'user ID',
+        'type'     => 'int', 
+        'unsigned' => TRUE, 
+        'not null' => TRUE,
+      ],
+   ],
+   'primary key' => ['hid'],
+    'index' => array('nid' => array('nid')),
+ ];
+ return $schema;
+}
+//*******************************//
+function hello_install() {
+ 
+   // Create the styles directory and ensure it's writable.
+   $directory = file_default_scheme() . '://styles';
+   file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
+}
+//*******************************//
+function hello_uninstall() {
+   
+   // Remove the styles directory and generated images.
+   file_unmanaged_delete_recursive(file_default_scheme() . '://styles');
+}
+//*******************************//
+function hello_update_8405() {
+  /*$spec = [
+      'hello_author' => [
+          'table' => 'users',
+          'columns' => ['uid' => 'uid'],
+    ];*/
+     $spec = [
+    'type' => 'int',
+    'description' => "author uid",
+    'unsigned'  => TRUE,
+    'not null' => TRUE,
+  ];
+
+  $schema = Database::getConnection()->schema();
+  $schema->addField('hello_node_history', 'uid', $spec);
+
+
+}
+
+

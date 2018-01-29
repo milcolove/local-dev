@@ -1,0 +1,20 @@
+uuid: ff759b70-2f3d-4d6d-a15b-1f7a9248b005
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hotel
+id: node.hotel.uid
+field_name: uid
+entity_type: node
+bundle: hotel
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

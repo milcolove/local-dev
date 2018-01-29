@@ -1,0 +1,19 @@
+uuid: 28cfce49-8d59-4124-bfb4-2f120310f148
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titre
+    - paragraphs.paragraphs_type.visite_guidee
+id: paragraph.visite_guidee.field_titre
+field_name: field_titre
+entity_type: paragraph
+bundle: visite_guidee
+label: 'Titre du lieu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

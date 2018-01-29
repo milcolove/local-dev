@@ -1,0 +1,6 @@
+uuid: c5900c1b-f71b-4357-b289-9fe72a9453fe
+langcode: fr
+status: true
+dependencies: {  }
+name: Default
+type: default

@@ -1,0 +1,9 @@
+uuid: 038ddb7f-461d-4c5a-af06-be73c7028b7e
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Catégorie hôtels'
+vid: categorie
+description: ''
+hierarchy: 0
+weight: 0

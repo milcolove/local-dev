@@ -1,0 +1,50 @@
+uuid: d7cd194f-46a1-41ae-b2e4-8876556eafff
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.restaurant.field_description
+    - field.field.node.restaurant.field_hotel
+    - field.field.node.restaurant.field_photos
+    - node.type.restaurant
+  module:
+    - image
+    - text
+    - user
+id: node.restaurant.default
+targetEntityType: node
+bundle: restaurant
+mode: default
+content:
+  field_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hotel:
+    weight: 103
+    label: above
+    settings:
+      view_mode: hotel_dans_une_fiche_restaurant
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_photos:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

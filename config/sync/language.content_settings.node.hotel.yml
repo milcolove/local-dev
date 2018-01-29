@@ -1,0 +1,16 @@
+uuid: 38ad58c5-50af-44eb-8886-01902060a2f4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.hotel
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.hotel
+target_entity_type_id: node
+target_bundle: hotel
+default_langcode: site_default
+language_alterable: false

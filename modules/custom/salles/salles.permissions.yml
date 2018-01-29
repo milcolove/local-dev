@@ -1,0 +1,19 @@
+add salles entity entities:
+  title: 'Create new Salles entity entities'
+
+administer salles entity entities:
+  title: 'Administer Salles entity entities'
+  description: 'Allow to access the administration form to configure Salles entity entities.'
+  restrict access: true
+
+delete salles entity entities:
+  title: 'Delete Salles entity entities'
+
+edit salles entity entities:
+  title: 'Edit Salles entity entities'
+
+view published salles entity entities:
+  title: 'View published Salles entity entities'
+
+view unpublished salles entity entities:
+  title: 'View unpublished Salles entity entities'

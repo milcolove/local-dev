@@ -1,0 +1,9 @@
+uuid: a4101a21-7f3d-443b-9345-d397995aa36c
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Type d''hôtels'
+vid: type_d_hotels
+description: 'vocabulaire type d''hôtels'
+hierarchy: 0
+weight: 0

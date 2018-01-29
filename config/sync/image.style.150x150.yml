@@ -1,0 +1,22 @@
+uuid: 0dfe4ac0-8d25-446e-9ddf-1323b9b7c396
+langcode: fr
+status: true
+dependencies:
+  module:
+    - crop
+name: 150x150
+label: 150x150
+effects:
+  07ea3291-901f-46cf-8bfb-1d4521caf8f6:
+    uuid: 07ea3291-901f-46cf-8bfb-1d4521caf8f6
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 150
+      height: 150
+  35a9f812-ed05-4b6a-897b-c8abfbae5c18:
+    uuid: 35a9f812-ed05-4b6a-897b-c8abfbae5c18
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: '200_200'

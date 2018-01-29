@@ -1,0 +1,16 @@
+four_squares:
+  label: Four squares
+  category: ive
+  path: templates/layouts/four-squares
+  template: four-squares
+  icon: four-squares.png
+  library: ive/
+  regions:
+    square1:
+      label: Top left
+    square2:
+      label: Top Right
+    square3:
+      label: Bottom left
+    square4:
+      label: Bottom Right

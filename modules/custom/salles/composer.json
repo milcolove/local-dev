@@ -1,0 +1,14 @@
+{
+  "name": "drupal/salles",
+  "type": "drupal-module",
+  "description": "My module salles",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/salles",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/salles",
+    "source": "http://cgit.drupalcode.org/salles"
+  },
+  "require": { }
+}

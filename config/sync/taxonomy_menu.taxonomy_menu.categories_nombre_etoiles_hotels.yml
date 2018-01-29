@@ -1,0 +1,14 @@
+uuid: 052b2870-45d5-4050-a589-5a982950161a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.hotels
+    - taxonomy.vocabulary.categorie
+id: categories_nombre_etoiles_hotels
+label: 'Catégories nombre étoiles hôtels'
+vocabulary: categorie
+menu: hotels
+expanded: false
+depth: 0
+menu_parent: 'hotels:menu_link_content:86cbc866-21fd-4c96-bbdd-b10776b8549a'

@@ -1,0 +1,16 @@
+uuid: 85293f18-ff0d-4376-bd6b-adaecce148d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.simplenews_issue
+target_entity_type_id: node
+target_bundle: simplenews_issue
+default_langcode: site_default
+language_alterable: false

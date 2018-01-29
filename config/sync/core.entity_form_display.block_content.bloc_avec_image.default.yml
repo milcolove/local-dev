@@ -1,0 +1,50 @@
+uuid: b1c40d7e-5bcb-4692-99a4-599520f274c0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_avec_image
+    - field.field.block_content.bloc_avec_image.body
+    - field.field.block_content.bloc_avec_image.field_image_bloc
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.bloc_avec_image.default
+targetEntityType: block_content
+bundle: bloc_avec_image
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image_bloc:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

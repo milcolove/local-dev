@@ -1,0 +1,18 @@
+uuid: 5446d9c3-338c-49fa-9985-1dbc70c788d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_avec_image
+id: block_content.bloc_avec_image.info
+field_name: info
+entity_type: block_content
+bundle: bloc_avec_image
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

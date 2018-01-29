@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains salles.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function salles_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the salles module.
+    case 'help.page.salles':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My module salles') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function salles_theme() {
+  return [
+    'salles' => [
+      'render element' => 'children',
+    ],
+  ];
+}

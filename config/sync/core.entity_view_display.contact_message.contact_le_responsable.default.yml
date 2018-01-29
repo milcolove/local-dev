@@ -1,0 +1,35 @@
+uuid: 74aa7c58-a849-479a-b124-ce5720d10f21
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.contact_le_responsable
+    - field.field.contact_message.contact_le_responsable.field_site_web
+  module:
+    - link
+id: contact_message.contact_le_responsable.default
+targetEntityType: contact_message
+bundle: contact_le_responsable
+mode: default
+content:
+  field_site_web:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  message:
+    type: basic_string
+    weight: 0
+    label: above
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

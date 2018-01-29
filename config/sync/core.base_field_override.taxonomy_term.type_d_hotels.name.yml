@@ -1,0 +1,18 @@
+uuid: 2802bd2e-2ade-491e-8ace-9b4ecabcc295
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.type_d_hotels
+id: taxonomy_term.type_d_hotels.name
+field_name: name
+entity_type: taxonomy_term
+bundle: type_d_hotels
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

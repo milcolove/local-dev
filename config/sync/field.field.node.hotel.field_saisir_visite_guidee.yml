@@ -1,0 +1,31 @@
+uuid: 53afd220-aaac-4d4b-bfda-876e7671994a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_saisir_visite_guidee
+    - node.type.hotel
+    - paragraphs.paragraphs_type.visite_guidee
+  module:
+    - entity_reference_revisions
+id: node.hotel.field_saisir_visite_guidee
+field_name: field_saisir_visite_guidee
+entity_type: node
+bundle: hotel
+label: 'Saisir visite guidée'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      visite_guidee: visite_guidee
+    target_bundles_drag_drop:
+      visite_guidee:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

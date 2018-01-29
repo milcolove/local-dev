@@ -1,0 +1,134 @@
+<?php
+function hello_cron() {
+  drupal_set_message(t('Hello module'), 'warning');
+}
+
+/*function hello_user_login($account){
+  $user = $account->getUsername();
+  drupal_set_message('Bienvenue cher '.'  '.$user);
+ // kint($account);
+ // die();
+}*/
+
+function hello_user_login($account){
+ //option 1
+drupal_set_message(t('Welcome dear %name!', array('%name' =>$account->getAccountName())));
+ // kint($account);
+ // die();
+ // option 2
+  /*drupal_set_message('Bienvenue dear '.$account->getAccountName());*/
+  \Drupal::service('cache_tags.invalidator')->invalidateTags(['sessions']);
+}
+
+function hello_user_logout($account){
+ \Drupal::service('cache_tags.invalidator')->invalidateTags(['sessions']);
+ 
+}
+
+/*function hello_entity_load(array $entities, $entity_type_id) {
+  foreach ($entities as $entity) {
+    $entity->hello_node_history = hello_add_history($entity);
+  }*/
+  /*function hello_node_update(Drupal\Core\Entity\EntityInterfacee $node) {
+	 	db_update('hello_node_history')->fields(array(
+	       'extra' => $node->extra)),
+	       'updated' => (int) $_SERVER['REQUEST_TIME'],
+	   ->condition('uid', $node->uid())
+	   ->execute();
+	}*/
+
+/*	function hello_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  // Update the entity's entry in a fictional table of all entities.
+	  db_update('node')
+	    ->fields([
+	      'updated' => REQUEST_TIME,
+	    ])
+	    ->condition('type', $entity->getEntityTypeId())
+	    ->condition('id', $entity->id())
+	    ->execute();
+}*/
+	function hello_node_update(Drupal\Core\Entity\EntityInterface $node) {
+		//kint($node);
+	//	die();
+		$data = \Drupal::service('database');
+		//\Drupal::service('database')
+	  $data->insert('hello_node_history')
+	    ->fields(array(
+	    'nid' => $node->id(),
+	    'uid' => $node->getRevisionUserId(), 
+	    'update_time' => $node->getChangedTime(),
+	  ))
+	    ->execute();
+	}
+
+	function hello_node_delete(Drupal\Core\Entity\EntityInterface $entity) {
+		//kint($entity);
+  	//	die();
+
+		$delete = \Drupal::service('database');
+ 		$delete->delete('hello_node_history')->condition('nid', $entity->id())->execute();
+}
+
+function hello_preprocess_block(array &$variables) {
+	$class = \Drupal::config('hello.config')->get('color');
+    $variables['attributes']['class'][] = $class;
+
+
+		// A voir à la maison
+	//if ($variables['plugin_id'] == 'system_branding_block') {
+    //$page['#attached']['library'][] = 'hello/base';
+  }
+
+   function hello_page_attachments(array &$page){
+   	$page['#attached']['library'][] = 'hello/base';
+   }
+
+
+function hello_theme($existing, $type, $theme, $path) {
+	/*$theme[];
+	$theme = ['hello_node_history'] = [
+	'variables' => 
+      ['node' => NULL,
+      'count' => NULL],
+      ];
+      
+	return $theme;*/
+  return array(
+    'hello_node_history' => array(
+      'template' => 'hello-node-history',
+      'variables' => array(
+      'node' => NULL,
+      'count' => NULL,
+      ),
+      ),
+    );
+    //kint($theme);
+      
+}
+
+
+function hello_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  //kint($form_id); // id=contact_message_feedback_form
+	if ($form_id=='contact_message_feedback_form') { 
+		// ajouter un champ contact
+		$form['phone_number'] = array(	
+	    '#type' => 'tel',
+	    '#title' => t("Telephon"),
+	    '#required' => TRUE,
+	    '#weight' => -10,
+  	);
+  	//$form['submit']['#value']='Send message now';
+	 $form['actions']['submit']['#value'] = t('Send message now');
+	 //positionnement des champs
+	 /*$form['name']['weight'] = 500;
+	 $form['mail']['weight'] = 400;
+	 $form['phone_number']['weight'] = 300;
+	 $form['subject']['weight'] = 200;
+	 $form['message']['weight'] = 100;*/
+
+	 // unset($form['#process']); //invalidation du process
+	  $form['subject']['#access']=False;
+  }
+}
+
+

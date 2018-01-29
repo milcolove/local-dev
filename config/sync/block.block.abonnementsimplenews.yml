@@ -1,0 +1,24 @@
+uuid: a1f65992-d3cc-49c5-9792-3d153c271a5f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - bartik
+id: abonnementsimplenews
+theme: bartik
+region: footer_fifth
+weight: 0
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Abonnement newsletter'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    newsletter_des_hotels: newsletter_des_hotels
+  message: 'Restez informé - abonnez-vous à notre newsletter.'
+  unique_id: f31e6978-de1e-42c0-b982-ca353d0073b0
+visibility: {  }

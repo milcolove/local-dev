@@ -1,0 +1,29 @@
+hello.hello: 
+  title: Hi
+  route_name: hello.hello
+  base_route: hello.hello
+  weight: 1
+
+hello.node: 
+  title: 'Node list'
+  route_name: hello.hellonodelist
+  base_route: hello.hello
+  weight: 2
+
+hello.history: 
+  title: 'Udapte history'
+  route_name: hello.helloarticleshistory
+  base_route: entity.node.canonical
+  weight: 1
+
+hello.formulaire: 
+  title: 'Calculatrice'
+  route_name: hello.form
+  base_route: hello.hello
+  weight: 3
+
+hello.admin: 
+  title: 'Block color '
+  route_name: hello.adminform
+  base_route: system.themes_page
+  weight: 2

@@ -1,0 +1,16 @@
+uuid: f4f6e475-5d24-4977-9145-3e461a85699e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_avec_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: block_content.bloc_avec_image
+target_entity_type_id: block_content
+target_bundle: bloc_avec_image
+default_langcode: site_default
+language_alterable: false

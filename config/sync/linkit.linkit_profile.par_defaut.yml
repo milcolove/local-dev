@@ -1,0 +1,20 @@
+uuid: 415af093-f368-44fb-b8bc-da47d10f7561
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: par_defaut
+label: 'Par defaut'
+description: ''
+attributes: {  }
+matchers:
+  4ce924fc-0ed5-41c8-8284-ed9412bdd081:
+    uuid: 4ce924fc-0ed5-41c8-8284-ed9412bdd081
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false

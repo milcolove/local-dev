@@ -1,0 +1,15 @@
+# Nom du module.
+name: hello
+# Description du module
+Description: Hello module pour développeur drupal
+#type du code module
+type: module
+# Version du drupal sur laquelle le module marche
+core: 8.x
+# Version du module
+version: 8.x-0.1
+# Groupe du module
+package: hôtels
+# Dependances du module
+dependencies:
+

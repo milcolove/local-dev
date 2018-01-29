@@ -1,0 +1,26 @@
+uuid: def8465b-ae19-4f03-8368-9d30e2588649
+langcode: fr
+status: true
+dependencies:
+  module:
+    - hello
+    - system
+  theme:
+    - bartik
+id: sessionsactives
+theme: bartik
+region: sidebar_first
+weight: -13
+provider: null
+plugin: SessionsActives
+settings:
+  id: SessionsActives
+  label: 'Sessions actives'
+  provider: hello
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

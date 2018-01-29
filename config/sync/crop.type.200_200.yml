@@ -1,0 +1,12 @@
+uuid: 4c6a15c9-6398-436b-8e56-610e9ec53c51
+langcode: fr
+status: true
+dependencies: {  }
+label: 200x200
+id: '200_200'
+description: 'carré de 200px*200px'
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 200
+hard_limit_height: 200

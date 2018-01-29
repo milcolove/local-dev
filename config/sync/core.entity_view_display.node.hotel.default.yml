@@ -1,0 +1,215 @@
+uuid: aa5aaebf-e4e7-4bfc-8d61-46fd1914b803
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.hotel.field_adresse
+    - field.field.node.hotel.field_brochure
+    - field.field.node.hotel.field_categorie_hotels
+    - field.field.node.hotel.field_description
+    - field.field.node.hotel.field_photos
+    - field.field.node.hotel.field_saisir_visite_guidee
+    - field.field.node.hotel.field_type_d_hotel
+    - field.field.node.hotel.field_video
+    - image.style.150x150
+    - node.type.hotel
+  module:
+    - colorbox
+    - entity_reference_revisions
+    - field_group
+    - file
+    - geolocation
+    - text
+    - user
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_textes:
+      children:
+        - links
+        - field_description
+        - field_type_d_hotel
+        - field_categorie_hotels
+        - field_brochure
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+      label: textes
+    group_galerie_photo:
+      children:
+        - field_photos
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+      label: 'galerie photo'
+    group_video:
+      children:
+        - field_video
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+      label: Vidéo
+    group_visite_guidee:
+      children:
+        - field_saisir_visite_guidee
+      parent_name: group_tabs
+      weight: 4
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Visite guidée'
+    group_carte:
+      children:
+        - field_adresse
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+      label: Carte
+    group_tabs:
+      children:
+        - group_textes
+        - group_galerie_photo
+        - group_video
+        - group_visite_guidee
+        - group_carte
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Tabs
+id: node.hotel.default
+targetEntityType: node
+bundle: hotel
+mode: default
+content:
+  field_adresse:
+    weight: 5
+    label: above
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: ROADMAP
+        zoom: '14'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_brochure:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_categorie_hotels:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_photos:
+    weight: 2
+    label: hidden
+    settings:
+      colorbox_node_style: 150x150
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+  field_saisir_visite_guidee:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_type_d_hotel:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_video:
+    weight: 6
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  langcode: true

@@ -1,0 +1,5 @@
+name: salles
+type: module
+description: My module salles
+core: 8.x
+package: 'Custom'

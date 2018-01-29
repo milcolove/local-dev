@@ -1,0 +1,38 @@
+uuid: 6abbc83a-312e-4ab5-94a4-47e1825d25e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photos
+    - node.type.restaurant
+  module:
+    - image
+id: node.restaurant.field_photos
+field_name: field_photos
+entity_type: node
+bundle: restaurant
+label: photo(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: restaurant
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

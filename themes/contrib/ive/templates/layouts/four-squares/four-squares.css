@@ -1,0 +1,19 @@
+
+.squares {display: flex; flex-wrap: wrap;}
+.squares > div {width:50%;}
+.squares > div:nth-child(1)
+{
+	background-color: yellow;
+}
+.squares> div:nth-child(2)
+{
+	background-color: blue;
+}
+.squares > div:nth-child(3)
+{
+	background-color: orange;
+}
+.squares > div:nth-child(4)
+{
+	background-color: green;
+}

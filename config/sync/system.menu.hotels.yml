@@ -1,0 +1,8 @@
+uuid: b14f1a67-1f41-4a95-b768-063cbf29182e
+langcode: fr
+status: true
+dependencies: {  }
+id: hotels
+label: 'Menu Hôtels'
+description: 'menu hôtel utilisant la taxonomy menu'
+locked: false

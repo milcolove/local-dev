@@ -1,0 +1,20 @@
+uuid: 23d7dd92-767a-4f53-b2e5-d11e4d8b1466
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+id: node.simplenews_issue.uid
+field_name: uid
+entity_type: node
+bundle: simplenews_issue
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

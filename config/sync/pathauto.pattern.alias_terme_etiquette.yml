@@ -1,0 +1,23 @@
+uuid: 9ef8d73a-7869-49f4-a5a1-5ea10c7c0261
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: alias_terme_etiquette
+label: 'Alias terme étiquette'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/blog/[term:name]'
+selection_criteria:
+  0e9b0242-3531-42cb-b0ca-ca9ce83e4197:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0e9b0242-3531-42cb-b0ca-ca9ce83e4197
+selection_logic: and
+weight: -5
+relationships: {  }

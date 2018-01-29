@@ -1,0 +1,50 @@
+.site-branding__name {
+    font-size: 2rem;
+    font-family: Impact;
+}
+.site-branding__name a {
+    color: orange;
+}
+#header {
+   /* background-color: #FFF;*/
+    background: #FFF;
+    background-image: none;
+}
+/*.path-frontpage #conetnt .node--view-mode-teaser h2
+{
+	font-size: 2rem;
+	font-family: Impact;
+}*/
+
+
+.path-frontpage #content .node--view-mode-teaser h2 a
+{
+	color: orange;
+	font-size: 2rem;
+	font-family: Impact;
+}
+.sidebar .block
+{
+    background-color: #fff;
+    border: 0px;
+}
+.sidebar .block > h2 
+{
+    text-transform: uppercase;
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+.
+{
+    background-color: orange;
+}
+.node .column
+{
+    float: left;
+    width: 50%;
+
+}
+.node .external:before
+{
+    content: url("../images/external-link.gif");
+}

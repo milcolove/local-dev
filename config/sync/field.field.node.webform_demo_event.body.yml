@@ -1,0 +1,24 @@
+uuid: e3e1e951-55c5-424f-85cd-37075be6a2f9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.webform_demo_event
+  module:
+    - text
+_core:
+  default_config_hash: kqYTgBpvsfapOwVjk0TOZdH9Szj2Zg3leAQEZRVWqfs
+id: node.webform_demo_event.body
+field_name: body
+entity_type: node
+bundle: webform_demo_event
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

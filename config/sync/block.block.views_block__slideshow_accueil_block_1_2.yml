@@ -1,0 +1,30 @@
+uuid: 0855c9a6-934e-4ddf-bbe0-cded2758f747
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.slideshow_accueil
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__slideshow_accueil_block_1_2
+theme: bartik
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:slideshow_accueil-block_1'
+settings:
+  id: 'views_block:slideshow_accueil-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

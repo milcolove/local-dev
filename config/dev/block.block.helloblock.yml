@@ -1,0 +1,34 @@
+uuid: aa4595db-24d6-4818-a064-7ad182b1cf45
+langcode: fr
+status: true
+dependencies:
+  module:
+    - annonce
+    - hello
+    - system
+  theme:
+    - bartik
+id: helloblock
+theme: bartik
+region: sidebar_first
+weight: -12
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Hello block'
+  provider: hello
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  date_condition:
+    id: date_condition
+    module: null
+    negate: null
+    context_mapping: {  }
+    datestart: '2018-01-31'
+    dateend: '2018-01-19'

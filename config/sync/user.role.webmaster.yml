@@ -1,0 +1,18 @@
+uuid: f85e1a9c-d1e7-472c-9fbf-94bb8801851f
+langcode: fr
+status: true
+dependencies: {  }
+id: webmaster
+label: webmaster
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'bypass node access'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view the administration theme'

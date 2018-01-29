@@ -1,0 +1,25 @@
+uuid: 16da88f2-bf01-44c5-8fbc-739248cac8e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.hotel
+  module:
+    - video_embed_field
+id: node.hotel.field_video
+field_name: field_video
+entity_type: node
+bundle: hotel
+label: Vidéo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    youtube_playlist: '0'
+    vimeo: '0'
+field_type: video_embed_field

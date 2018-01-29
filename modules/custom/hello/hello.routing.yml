@@ -1,0 +1,80 @@
+hello.hello:
+  path: '/hello/{param}'
+  defaults:
+    _title: 'Hello'
+    _controller: '\Drupal\hello\Controller\HelloController::content'
+    param: 'no parameter'
+  requirements:
+    _access_hello: '48'
+    
+
+hello.hellojson:
+  path: '/hello-json/.{_format}'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::jsonFormat'
+  requirements:
+    _access: 'TRUE'
+    
+hello.hellonodelist:
+  path: '/hellonode/{param}'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloNodeListController::content'
+    param: NULL
+  requirements:
+    _access: 'TRUE'
+
+hello.helloarticleshistory:
+  path: '/node/{node}/history'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloHistoryController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.form:
+  path: '/hello-form'
+  defaults:
+    _title: 'Hello formulaire de calcul'
+    _form: '\Drupal\hello\Form\HelloForm'
+  #  param: 'no parameter'
+  requirements:
+    _permission: 'access hello'
+
+hello.adminform:
+  path: '/admin/appearance/block-color'
+  defaults:
+    _title: 'Block color'
+    _form: '\Drupal\hello\Form\HelloAdminForm'
+  #  param: 'no parameter'
+  requirements:
+    _permission: 'administer hello'
+
+# hello.admindesactive:
+#   path: '/admin/modules'
+#   defaults:
+#     _controller: '\Drupal\hello\Form\HelloAdminForm'
+#   requirements:
+#     event_subscriber: 
+
+hello.formcountry:
+  path: '/hello-country'
+  defaults:
+    _title: 'liste des pays'
+    _form: '\Drupal\hello\Form\HelloCountriesForm'
+  requirements:
+    _access: 'TRUE'
+hello.console_test_controller_hello:
+  path: '/hello/hello/{name}'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::hello'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'
+
+hello.contact_webmaster:
+  path: '/hello/form/contact_webmaster'
+  defaults:
+    _form: '\Drupal\hello\Form\ContactWebmaster'
+    _title: 'ContactWebmaster'
+  requirements:
+    _access: 'TRUE'
+  

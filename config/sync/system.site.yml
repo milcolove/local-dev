@@ -1,0 +1,14 @@
+uuid: 20ae3e77-2ff8-4fae-8572-373c91fc6964
+name: 'Hôtels et restaurants modif'
+mail: milco57ah@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

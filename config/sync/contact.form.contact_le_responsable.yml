@@ -1,0 +1,12 @@
+uuid: 65b6b13c-51d0-4c62-b1c9-56aecc4c383f
+langcode: fr
+status: true
+dependencies: {  }
+id: contact_le_responsable
+label: 'Contact le responsable'
+recipients:
+  - milco57ah@gmail.com
+reply: ''
+weight: 0
+message: 'Merci pour votre message !!!'
+redirect: ''

@@ -1,0 +1,14 @@
+uuid: aaf94b1a-3fbd-4618-92b4-edfd780d4873
+langcode: fr
+status: true
+dependencies: {  }
+name: slideshow
+label: slideshow
+effects:
+  4e3ca037-6eb5-4d30-9dac-9b757b494358:
+    uuid: 4e3ca037-6eb5-4d30-9dac-9b757b494358
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 253

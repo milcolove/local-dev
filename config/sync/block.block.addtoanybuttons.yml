@@ -1,0 +1,28 @@
+uuid: 3f00dae5-16bd-4fdb-87c9-542b24ec7fd1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - addtoany
+    - ctools
+  theme:
+    - bartik
+id: addtoanybuttons
+theme: bartik
+region: footer_fifth
+weight: 0
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Accès aux réseaux sociaux'
+  provider: addtoany
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      hotel: hotel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

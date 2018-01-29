@@ -1,0 +1,17 @@
+uuid: 90352da7-ce39-4199-9235-c9760043b1f5
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Newsletter des hôtels'
+id: newsletter_des_hotels
+description: 'Des nouvelles de nos hôtels'
+format: html
+priority: 0
+receipt: true
+from_name: 'Hôtels et restaurants'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: milco57ah@gmail.com
+hyperlinks: true
+new_account: none
+opt_inout: double
+weight: 0
